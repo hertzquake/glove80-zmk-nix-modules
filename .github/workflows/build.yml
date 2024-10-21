@@ -11,7 +11,7 @@ jobs:
           submodules: recursive
       - uses: actions/checkout@v4
         with:
-          repository: moergo-sc/zmk
+          repository: hertzquake/moergo-zmk
           ref: main
           path: src
       - uses: cachix/install-nix-action@v25
@@ -22,7 +22,7 @@ jobs:
           name: moergo-glove80-zmk-dev
           skipPush: true
       - name: Build Glove80 combined firmware
-        run: nix-build config -o combined
+        run: nix-build config -o combined --arg extra_modules '"./zmk-helpers"'
       - name: Copy result out of nix store
         run: cp combined/glove80.uf2 glove80.uf2
       - name: Upload result

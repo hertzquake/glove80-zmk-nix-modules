@@ -1,4 +1,19 @@
-# MoErgo Glove80 Custom Configuration for ZMK
+# Glove80 zmk nix with [modules](https://zmk.dev/docs/features/modules)
+
+Until I have a better way, to add/change modules, you need to either update the `build.yaml` or the `Dockerfile`
+It uses git submodules for zmk modules for simplicity
+It uses a small fork of Moergo's zmk fork to allow specifying the [extra modules config var](https://zmk.dev/docs/development/local-toolchain/build-flash#building-with-external-modules) to zmk
+
+Enjoy
+
+# Keymap-drawer
+
+You can use `draw.sh` to generate a svg of the keymap
+The config contains the path to zmk-helpers includes, so that keymap-drawer knows where to look for
+
+![Keymap](draw/glove80.svg)
+
+# Original README:
 
 ![MoErgo Logo](moergo_logo.png)
 
@@ -17,8 +32,8 @@ If you are looking to dig deeper into ZMK and develop new functionality, it is r
 - The [official ZMK Documentation](https://zmk.dev/docs) web site. Find the answers to many of your questions about ZMK Firmware.
 - The [official ZMK Discord Server](https://discord.gg/8cfMkQksSB). Instant conversations with other ZMK developers and users. Great technical resource!
 
-- The [official Glove80 ZMK Distribution](https://github.com/moergo-sc/zmk). Repositiory for ZMK firmware customized for Glove80. 
- 
+- The [official Glove80 ZMK Distribution](https://github.com/moergo-sc/zmk). Repositiory for ZMK firmware customized for Glove80.
+
 ## Instructions
 1. Log into, or sign up for, your personal GitHub account.
 2. Create your own repository using this repository as a template ([instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)) and check it out on your local computer.
